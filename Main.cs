@@ -38,5 +38,30 @@ namespace Winform_SQL_Project
                 RefreshTable();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (DgDATA.CurrentRow != null)
+            {
+                string name = DgDATA.CurrentRow.Cells[1].Value.ToString();
+                string family = DgDATA.CurrentRow.Cells[2].Value.ToString();
+                if (MessageBox.Show($"Are you sure to delete {name} {family} ?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int ContactID = Convert.ToInt32(DgDATA.CurrentRow.Cells[0].Value.ToString());
+                    repo.Delete(ContactID);
+                    RefreshTable();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row!", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

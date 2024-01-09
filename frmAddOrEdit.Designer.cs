@@ -71,7 +71,7 @@ namespace Winform_SQL_Project
             this.txtAddName.Location = new System.Drawing.Point(93, 10);
             this.txtAddName.Name = "txtAddName";
             this.txtAddName.Size = new System.Drawing.Size(204, 22);
-            this.txtAddName.TabIndex = 2;
+            this.txtAddName.TabIndex = 1;
             // 
             // label3
             // 
@@ -103,7 +103,7 @@ namespace Winform_SQL_Project
             this.txtAddPhone.Location = new System.Drawing.Point(92, 71);
             this.txtAddPhone.Name = "txtAddPhone";
             this.txtAddPhone.Size = new System.Drawing.Size(204, 22);
-            this.txtAddPhone.TabIndex = 5;
+            this.txtAddPhone.TabIndex = 3;
             // 
             // txtAddEmail
             // 
@@ -113,7 +113,7 @@ namespace Winform_SQL_Project
             this.txtAddEmail.Location = new System.Drawing.Point(93, 141);
             this.txtAddEmail.Name = "txtAddEmail";
             this.txtAddEmail.Size = new System.Drawing.Size(475, 22);
-            this.txtAddEmail.TabIndex = 6;
+            this.txtAddEmail.TabIndex = 4;
             // 
             // txtAddLast
             // 
@@ -123,7 +123,7 @@ namespace Winform_SQL_Project
             this.txtAddLast.Location = new System.Drawing.Point(440, 9);
             this.txtAddLast.Name = "txtAddLast";
             this.txtAddLast.Size = new System.Drawing.Size(204, 22);
-            this.txtAddLast.TabIndex = 7;
+            this.txtAddLast.TabIndex = 2;
             // 
             // btnSubmit
             // 
@@ -134,7 +134,7 @@ namespace Winform_SQL_Project
             this.btnSubmit.Location = new System.Drawing.Point(92, 256);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(89, 27);
-            this.btnSubmit.TabIndex = 8;
+            this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -149,11 +149,11 @@ namespace Winform_SQL_Project
             this.btnCancel.Location = new System.Drawing.Point(440, 256);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(89, 27);
-            this.btnCancel.TabIndex = 9;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
-            // frmAdd
+            // frmAddOrEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -169,7 +169,7 @@ namespace Winform_SQL_Project
             this.Controls.Add(this.txtAddName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "frmAdd";
+            this.Name = "frmAddOrEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frmAdd_Load);
             this.ResumeLayout(false);

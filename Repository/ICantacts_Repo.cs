@@ -12,9 +12,9 @@ namespace Winform_SQL_Project
     {
         DataTable SelectAll();
         DataTable SelectRow(int ContactID);
-        DataTable DeleteAll();
-        bool insert(string name , string family , string phoneNumber , string Email);
+        bool DeleteAll();
+        bool Insert(string name , string family , string phoneNumber , string Email);
         bool Delete(int ContactID);
-        bool Update(int ContactID , string name, string family, string phoneNumber, string Email );
+        bool Edit(int ContactID , string name, string family, string phoneNumber, string Email );
     }
 }
