@@ -35,6 +35,10 @@ namespace Winform_SQL_Project
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.btnAddContact = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnDelete = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnEdit = new System.Windows.Forms.ToolStripStatusLabel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgDATA)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -42,6 +46,7 @@ namespace Winform_SQL_Project
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtSearch);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DarkRed;
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
@@ -85,7 +90,9 @@ namespace Winform_SQL_Project
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAddContact,
-            this.toolStripStatusLabel1});
+            this.toolStripStatusLabel1,
+            this.btnDelete,
+            this.btnEdit});
             this.statusStrip1.Location = new System.Drawing.Point(0, 503);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(761, 34);
@@ -114,6 +121,36 @@ namespace Winform_SQL_Project
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(98, 28);
             this.toolStripStatusLabel1.Text = "Refresh";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.ActiveLinkColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.Red;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(85, 28);
+            this.btnDelete.Text = "Delete";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.ActiveLinkColor = System.Drawing.Color.Transparent;
+            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.Red;
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(56, 28);
+            this.btnEdit.Text = "Edit";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.Black;
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(24, 47);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(706, 34);
+            this.txtSearch.TabIndex = 0;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -127,6 +164,8 @@ namespace Winform_SQL_Project
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact app";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgDATA)).EndInit();
             this.statusStrip1.ResumeLayout(false);
@@ -144,6 +183,9 @@ namespace Winform_SQL_Project
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel btnAddContact;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.ToolStripStatusLabel btnDelete;
+        private System.Windows.Forms.ToolStripStatusLabel btnEdit;
     }
 }
 
