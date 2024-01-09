@@ -28,7 +28,7 @@ namespace Winform_SQL_Project
         {
             if (isValid())
             {
-                bool isSucsses = repo.insert(txtAddName.Text, txtAddLast.Text, txtAddPhone.Text, txtAddEmail.Text);
+                bool isSucsses = repo.Insert(txtAddName.Text, txtAddLast.Text, txtAddPhone.Text, txtAddEmail.Text);
 
                 if (isSucsses == true)
                 {

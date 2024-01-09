@@ -63,5 +63,19 @@ namespace Winform_SQL_Project
         {
 
         }
+
+        private void btnDeleteAll_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure ? " , "Delete All" , MessageBoxButtons.YesNo , MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                repo.DeleteAll();
+                RefreshTable();
+            }
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+            RefreshTable();
+        }
     }
 }

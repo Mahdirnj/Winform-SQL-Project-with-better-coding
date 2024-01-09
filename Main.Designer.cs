@@ -38,6 +38,7 @@ namespace Winform_SQL_Project
             this.btnDelete = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnEdit = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnDeleteAll = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgDATA)).BeginInit();
@@ -92,7 +93,8 @@ namespace Winform_SQL_Project
             this.btnAddContact,
             this.toolStripStatusLabel1,
             this.btnDelete,
-            this.btnEdit});
+            this.btnEdit,
+            this.btnDeleteAll});
             this.statusStrip1.Location = new System.Drawing.Point(0, 503);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(761, 34);
@@ -120,6 +122,7 @@ namespace Winform_SQL_Project
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(98, 28);
             this.toolStripStatusLabel1.Text = "Refresh";
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
             // btnDelete
             // 
@@ -152,6 +155,17 @@ namespace Winform_SQL_Project
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(706, 34);
             this.txtSearch.TabIndex = 0;
+            // 
+            // btnDeleteAll
+            // 
+            this.btnDeleteAll.ActiveLinkColor = System.Drawing.Color.Transparent;
+            this.btnDeleteAll.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteAll.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAll.ForeColor = System.Drawing.Color.Red;
+            this.btnDeleteAll.Name = "btnDeleteAll";
+            this.btnDeleteAll.Size = new System.Drawing.Size(123, 28);
+            this.btnDeleteAll.Text = "Delete All";
+            this.btnDeleteAll.Click += new System.EventHandler(this.btnDeleteAll_Click);
             // 
             // Main
             // 
@@ -188,6 +202,7 @@ namespace Winform_SQL_Project
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ToolStripStatusLabel btnDelete;
         private System.Windows.Forms.ToolStripStatusLabel btnEdit;
+        private System.Windows.Forms.ToolStripStatusLabel btnDeleteAll;
     }
 }
 
