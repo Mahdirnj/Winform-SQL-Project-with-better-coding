@@ -18,17 +18,17 @@ namespace Winform_SQL_Project
             InitializeComponent();
             repo = new ContactRepo();
         }
-
+        //------------------------------------------------------------------
         private void Form1_Load(object sender, EventArgs e)
         {
             RefreshTable();
         }
-
+        //------------------------------------------------------------------
         private void RefreshTable()
         {
             DgDATA.DataSource = repo.SelectAll();
         }
-
+        //------------------------------------------------------------------
         private void btnAddContact_Click(object sender, EventArgs e)
         {
             frmAddOrEdit addfrm = new frmAddOrEdit();
@@ -38,7 +38,7 @@ namespace Winform_SQL_Project
                 RefreshTable();
             }
         }
-
+        //------------------------------------------------------------------
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (DgDATA.CurrentRow != null)
@@ -58,12 +58,12 @@ namespace Winform_SQL_Project
             }
 
         }
-
+        //------------------------------------------------------------------
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            
         }
-
+        //------------------------------------------------------------------
         private void btnDeleteAll_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure ? " , "Delete All" , MessageBoxButtons.YesNo , MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -72,7 +72,7 @@ namespace Winform_SQL_Project
                 RefreshTable();
             }
         }
-
+        //------------------------------------------------------------------
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
             RefreshTable();

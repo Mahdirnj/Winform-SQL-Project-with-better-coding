@@ -57,7 +57,7 @@ namespace Winform_SQL_Project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(303, 9);
+            this.label2.Location = new System.Drawing.Point(311, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 24);
             this.label2.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace Winform_SQL_Project
             this.txtAddName.BackColor = System.Drawing.Color.Black;
             this.txtAddName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddName.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtAddName.Location = new System.Drawing.Point(93, 10);
+            this.txtAddName.Location = new System.Drawing.Point(105, 9);
             this.txtAddName.Name = "txtAddName";
             this.txtAddName.Size = new System.Drawing.Size(204, 22);
             this.txtAddName.TabIndex = 1;
@@ -100,7 +100,7 @@ namespace Winform_SQL_Project
             this.txtAddPhone.BackColor = System.Drawing.Color.Black;
             this.txtAddPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddPhone.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtAddPhone.Location = new System.Drawing.Point(92, 71);
+            this.txtAddPhone.Location = new System.Drawing.Point(105, 70);
             this.txtAddPhone.Name = "txtAddPhone";
             this.txtAddPhone.Size = new System.Drawing.Size(204, 22);
             this.txtAddPhone.TabIndex = 3;
@@ -110,7 +110,7 @@ namespace Winform_SQL_Project
             this.txtAddEmail.BackColor = System.Drawing.Color.Black;
             this.txtAddEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddEmail.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtAddEmail.Location = new System.Drawing.Point(93, 141);
+            this.txtAddEmail.Location = new System.Drawing.Point(105, 142);
             this.txtAddEmail.Name = "txtAddEmail";
             this.txtAddEmail.Size = new System.Drawing.Size(475, 22);
             this.txtAddEmail.TabIndex = 4;
@@ -120,7 +120,7 @@ namespace Winform_SQL_Project
             this.txtAddLast.BackColor = System.Drawing.Color.Black;
             this.txtAddLast.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddLast.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtAddLast.Location = new System.Drawing.Point(440, 9);
+            this.txtAddLast.Location = new System.Drawing.Point(448, 9);
             this.txtAddLast.Name = "txtAddLast";
             this.txtAddLast.Size = new System.Drawing.Size(204, 22);
             this.txtAddLast.TabIndex = 2;
@@ -135,7 +135,7 @@ namespace Winform_SQL_Project
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(89, 27);
             this.btnSubmit.TabIndex = 5;
-            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.Text = "Add";
             this.btnSubmit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -171,6 +171,7 @@ namespace Winform_SQL_Project
             this.Controls.Add(this.label1);
             this.Name = "frmAddOrEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Add";
             this.Load += new System.EventHandler(this.frmAdd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
