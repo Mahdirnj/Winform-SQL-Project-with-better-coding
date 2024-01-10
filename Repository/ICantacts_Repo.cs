@@ -11,7 +11,7 @@ namespace Winform_SQL_Project
     interface ICantacts_Repo
     {
         DataTable SelectAll();
-        DataTable SelectRow(int ContactID);
+        DataTable Search(string Parameter);
         bool DeleteAll();
         bool Insert(string name , string family , string phoneNumber , string Email);
         bool Delete(int ContactID);
