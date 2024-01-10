@@ -64,7 +64,28 @@ namespace Winform_SQL_Project
 
         public bool Edit(int ContactID, string name, string family, string phoneNumber, string Email)
         {
-            throw new NotImplementedException();
+            SqlConnection connection = new SqlConnection(ConnectionString);
+            try
+            {
+                string Query = "UPDATE Contacts SET Name='@Name' , Family='@Family' , Phone_Number='@phonenum' , Email='@Email'";
+                SqlCommand command = new SqlCommand(Query, connection);
+                command.Parameters.AddWithValue("@Name",name);
+                command.Parameters.AddWithValue("@Family", family);
+                command.Parameters.AddWithValue("@phonenum", phoneNumber);
+                command.Parameters.AddWithValue("@Email", Email);
+                connection.Open();
+                command.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ix)
+            {
+                return false;
+                throw;
+            }
+            finally
+            {
+
+            }
         }
 
 

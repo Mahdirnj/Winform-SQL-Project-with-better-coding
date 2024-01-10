@@ -144,7 +144,7 @@ namespace Winform_SQL_Project
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(56, 28);
             this.btnEdit.Text = "Edit";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // txtSearch
             // 
@@ -176,7 +176,6 @@ namespace Winform_SQL_Project
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact app";
             this.Load += new System.EventHandler(this.Form1_Load);

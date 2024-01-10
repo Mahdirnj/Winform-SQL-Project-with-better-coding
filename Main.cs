@@ -19,11 +19,30 @@ namespace Winform_SQL_Project
             repo = new ContactRepo();
         }
         //------------------------------------------------------------------
+        public static int  ContactID;
+        public static string Name , Family, phonenumber, Email54;
         private void Form1_Load(object sender, EventArgs e)
         {
             RefreshTable();
         }
         //------------------------------------------------------------------
+
+       
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            ContactID = int.Parse(DgDATA.CurrentRow.Cells[0].Value.ToString());
+            Name = DgDATA.CurrentRow.Cells[1].Value.ToString();
+            Family = DgDATA.CurrentRow.Cells[2].Value.ToString();
+            phonenumber = DgDATA.CurrentRow.Cells[3].Value.ToString();
+            Email54 = DgDATA.CurrentRow.Cells[4].Value.ToString();
+            frmEdit editform = new frmEdit();
+            editform.ShowDialog();
+            RefreshTable();
+        }
+
+
+        //------------------------------------------------------------------
+
         private void RefreshTable()
         {
             DgDATA.DataSource = repo.SelectAll();
@@ -38,7 +57,11 @@ namespace Winform_SQL_Project
                 RefreshTable();
             }
         }
+
+
         //------------------------------------------------------------------
+        
+        
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (DgDATA.CurrentRow != null)
@@ -58,15 +81,12 @@ namespace Winform_SQL_Project
             }
 
         }
-        //------------------------------------------------------------------
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
+       
         //------------------------------------------------------------------
         private void btnDeleteAll_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure ? " , "Delete All" , MessageBoxButtons.YesNo , MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure ? ", "Delete All", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 repo.DeleteAll();
                 RefreshTable();

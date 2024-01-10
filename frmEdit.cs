@@ -17,8 +17,14 @@ namespace Winform_SQL_Project
         {
             InitializeComponent();
             repo = new ContactRepo();
-
+            
+        }        
+        private void frmEdit_Load(object sender, EventArgs e)
+        {
+            txtEditName.Text = Main.Name;
+            txtEditLast.Text = Main.Family;
+            txtEditPhone.Text = Main.phonenumber;
+            txtEditEmail.Text = Main.Email54;
         }
-
     }
 }

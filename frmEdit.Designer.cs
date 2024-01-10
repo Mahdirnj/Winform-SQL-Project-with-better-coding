@@ -173,6 +173,7 @@ namespace Winform_SQL_Project
             this.Name = "frmEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Edit Contact";
+            this.Load += new System.EventHandler(this.frmEdit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
