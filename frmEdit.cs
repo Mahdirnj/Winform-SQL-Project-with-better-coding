@@ -40,7 +40,18 @@ namespace Winform_SQL_Project
 
         private void btnSubmitEdit_Click(object sender, EventArgs e)
         {
-            repo.Edit(ContID,txtEditName.Text,txtEditLast.Text,txtEditPhone.Text,txtEditEmail.Text);
+           bool Status =  repo.Edit(ContID,txtEditName.Text,txtEditLast.Text,txtEditPhone.Text,txtEditEmail.Text);
+            if (Status)
+            {
+                MessageBox.Show("Done", "Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Failed", "Status", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
+           
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

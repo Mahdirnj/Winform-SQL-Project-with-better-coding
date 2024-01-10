@@ -30,6 +30,7 @@ namespace Winform_SQL_Project
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.DgDATA = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -37,7 +38,6 @@ namespace Winform_SQL_Project
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnDelete = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnEdit = new System.Windows.Forms.ToolStripStatusLabel();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnDeleteAll = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -56,6 +56,19 @@ namespace Winform_SQL_Project
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.White;
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtSearch.Location = new System.Drawing.Point(24, 47);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(706, 34);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // groupBox2
             // 
@@ -145,16 +158,6 @@ namespace Winform_SQL_Project
             this.btnEdit.Size = new System.Drawing.Size(56, 28);
             this.btnEdit.Text = "Edit";
             this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.Color.Black;
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(24, 47);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(706, 34);
-            this.txtSearch.TabIndex = 0;
             // 
             // btnDeleteAll
             // 

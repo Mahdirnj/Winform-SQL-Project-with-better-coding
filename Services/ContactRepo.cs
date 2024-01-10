@@ -124,6 +124,17 @@ namespace Winform_SQL_Project
                 connection.Close();
             }
         }
+        //-----------------------------------------------------------------------------------------
+        public DataTable Search(string Parameter)
+        {
+            string Query = "Select * From Contacts WHERE Name Like @parameter or Family Like @parameter";
+            SqlConnection Connection = new SqlConnection(ConnectionString);
+            SqlDataAdapter Adapter = new SqlDataAdapter(Query, Connection);
+            Adapter.SelectCommand.Parameters.AddWithValue("@parameter", "%" + Parameter + "%");
+            DataTable Data = new DataTable();
+            Adapter.Fill(Data);
+            return Data;
+        }
 
 
         //------------------------------------------------------------------------------------------
@@ -136,13 +147,6 @@ namespace Winform_SQL_Project
             DataTable Data = new DataTable();
             Adapter.Fill(Data);
             return Data;
-        }
-
-
-        //----------------------------------------------------------------------------------------
-        public DataTable SelectRow(int ContactID)
-        {
-            throw new NotImplementedException();
         }
     }
 }

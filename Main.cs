@@ -58,10 +58,16 @@ namespace Winform_SQL_Project
             }
         }
 
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            DgDATA.DataSource = repo.Search(txtSearch.Text);
+        
+        }
+
 
         //------------------------------------------------------------------
-        
-        
+
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (DgDATA.CurrentRow != null)
