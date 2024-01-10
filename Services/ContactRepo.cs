@@ -67,8 +67,9 @@ namespace Winform_SQL_Project
             SqlConnection connection = new SqlConnection(ConnectionString);
             try
             {
-                string Query = "UPDATE Contacts SET Name='@Name' , Family='@Family' , Phone_Number='@phonenum' , Email='@Email'";
+                string Query = "UPDATE Contacts SET Name=@Name,Family=@Family,Phone_Number=@phonenum,Email=@Email  WHERE Contact_ID=@CosID";
                 SqlCommand command = new SqlCommand(Query, connection);
+                command.Parameters.AddWithValue("@CosID", ContactID);
                 command.Parameters.AddWithValue("@Name",name);
                 command.Parameters.AddWithValue("@Family", family);
                 command.Parameters.AddWithValue("@phonenum", phoneNumber);
@@ -78,13 +79,13 @@ namespace Winform_SQL_Project
                 return true;
             }
             catch (Exception ix)
-            {
-                return false;
+            { 
+                return false ;
                 throw;
             }
             finally
             {
-
+                connection.Close();
             }
         }
 

@@ -53,6 +53,7 @@ namespace Winform_SQL_Project
             this.btnCancel.TabIndex = 13;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmitEdit
             // 
@@ -67,6 +68,7 @@ namespace Winform_SQL_Project
             this.btnSubmitEdit.Text = "Edit";
             this.btnSubmitEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSubmitEdit.UseVisualStyleBackColor = false;
+            this.btnSubmitEdit.Click += new System.EventHandler(this.btnSubmitEdit_Click);
             // 
             // txtEditLast
             // 
